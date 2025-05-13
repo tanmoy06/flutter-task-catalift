@@ -1,21 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 extension ResponsiveSize on num {
-  static const double scaleFactorH = 0.117; //100/devide screen height
-  static const double scalefactorW = 0.254; //100/device screen width
+  static const double scaleFactorH = 0.117; // 100 / device screen height
+  static const double scaleFactorW = 0.254; // 100 / device screen width
 
-  double get h => this * Get.height / 100;
+  double h(BuildContext context) =>
+      this * MediaQuery.of(context).size.height / 100;
 
-  double get w => this * Get.width / 100;
+  double w(BuildContext context) =>
+      this * MediaQuery.of(context).size.width / 100;
 
-  double get ksp => this * (Get.width / 3) / 126;
+  double ksp(BuildContext context) =>
+      this * (MediaQuery.of(context).size.width / 3) / 126;
 
-  double get kh => (this * Get.height * scaleFactorH) / 100;
+  double kh(BuildContext context) =>
+      (this * MediaQuery.of(context).size.height * scaleFactorH) / 100;
 
-  double get kw => (this * Get.width * scalefactorW) / 100;
+  double kw(BuildContext context) =>
+      (this * MediaQuery.of(context).size.width * scaleFactorW) / 100;
 
-  Widget get kheightBox => SizedBox(height: kh);
+  Widget kheightBox(BuildContext context) => SizedBox(height: kh(context));
 
-  Widget get kwidthBox => SizedBox(width: kw);
+  Widget kwidthBox(BuildContext context) => SizedBox(width: kw(context));
 }

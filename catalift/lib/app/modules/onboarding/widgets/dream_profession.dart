@@ -27,15 +27,15 @@ class DreamProfessionPage extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          20.kheightBox,
+          20.kheightBox(context),
           Text(
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
             "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             style: TextStyle(fontSize: 12, color: AppColors.black),
           ),
-          40.kheightBox,
+          40.kheightBox(context),
           SizedBox(
-            width: 100.w,
+            width: 100.w(context),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -67,7 +67,7 @@ class DreamProfessionPage extends StatelessWidget {
                     ),
 
                     SizedBox(
-                      width: 30.w,
+                      width: 30.w(context),
                       child: DropdownButtonFormField<String>(
                         isExpanded: true,
                         value: controller.selectedProfession.value,
@@ -119,9 +119,9 @@ class DreamProfessionPage extends StatelessWidget {
                       "Company/Industry",
                       style: TextStyle(color: AppColors.black, fontSize: 13),
                     ),
-                    4.kheightBox,
+                    4.kheightBox(context),
                     SizedBox(
-                      width: 30.w,
+                      width: 30.w(context),
                       child: DropdownButtonFormField<String>(
                         value: controller.selectedCompany.value,
                         items:
@@ -159,17 +159,17 @@ class DreamProfessionPage extends StatelessWidget {
             ),
           ),
 
-          34.kheightBox,
+          34.kheightBox(context),
           Center(
             child: Column(
               children: [
                 CustomElevatedButton(
                   buttonText: 'Continue',
-                  height: 50.kh,
-                  width: 100.w,
+                  height: 50.kh(context),
+                  width: 100.w(context),
                   onPressed: controller.next,
                 ),
-                14.kheightBox,
+                14.kheightBox(context),
                 CustomElevatedButton(
                   buttonColor: AppColors.white,
                   buttonText: 'Back',
@@ -177,8 +177,8 @@ class DreamProfessionPage extends StatelessWidget {
                     color: AppColors.indigo900,
                     fontSize: 18,
                   ),
-                  height: 50.kh,
-                  width: 100.w,
+                  height: 50.kh(context),
+                  width: 100.w(context),
                   onPressed: controller.back,
                 ),
               ],

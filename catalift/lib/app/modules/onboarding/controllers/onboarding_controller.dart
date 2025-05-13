@@ -8,20 +8,19 @@ class OnboardingController extends GetxController {
   double get progress => (currentStep.value + 1) / totalSteps;
 
   final allInterests = <String>[
-    'Lorem Ipsum Dolor',
+    'Lorem Ipsum',
     'Lorem',
     'Ipsum',
     'Dolor',
-    'Sit Amet Consectetur',
+    'Sit Amet',
     'Adipiscing Elit',
-    'Sed Do Eiusmod',
+    'Sed Do',
     'Tempor Incididunt',
-    'Ut Labore Et Dolore',
+    'Et Dolore',
     'Magna Aliqua',
-    'Ut Enim Ad Minim',
-    'Veniam Quis Nostrud',
-    'Exercitation Ullamco',
-    'Laboris Nisi Ut',
+    'Ad Minim',
+    'Veniam',
+    'Exercitation',
   ];
 
   var selectedInterests = <String>[].obs;
@@ -30,7 +29,12 @@ class OnboardingController extends GetxController {
 
   RxList<String> filteredInterests = <String>[].obs;
   final professions =
-      ['Software Engineer', 'Doctor', 'Designer', 'Teacher'].obs;
+      [
+        'Software Engineer',
+        'Designer',
+        'Sequirity Engineer',
+        'Cloud Engineer',
+      ].obs;
   final companies = ['Apple', 'Google', 'Microsoft', 'Amazon'].obs;
 
   final selectedProfession = 'Software Engineer'.obs;

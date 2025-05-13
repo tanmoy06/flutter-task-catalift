@@ -18,7 +18,12 @@ class OnboardingView extends GetView<OnboardingController> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 28.0, left: 50, right: 50),
+              padding: const EdgeInsets.only(
+                top: 28.0,
+                left: 50,
+                right: 50,
+                bottom: 20,
+              ),
               child: Obx(
                 () => LinearProgressIndicator(
                   borderRadius: BorderRadius.circular(14),
@@ -29,7 +34,6 @@ class OnboardingView extends GetView<OnboardingController> {
                 ),
               ),
             ),
-
             Expanded(
               child: Obx(
                 () => SingleChildScrollView(

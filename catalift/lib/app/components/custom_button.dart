@@ -45,7 +45,7 @@ class CustomElevatedButton extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             if (leadingIcon != null) leadingIcon!,
-            6.kwidthBox,
+            6.kwidthBox(context),
             if (buttonText.isNotEmpty && textStyle == null)
               Text(
                 buttonText,
